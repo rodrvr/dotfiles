@@ -19,22 +19,22 @@ window-padding-x = 12
 window-padding-y = 12
 window-theme = dark
 
-# Transparencia y desenfoque nativo con GPU Metal
-background-opacity = 0.85
+# Transparencia y desenfoque nativo con GPU Metal (Efecto vidrio negro esmerilado)
+background-opacity = 0.80
 background-blur-radius = 20
 
 # Cursor
 cursor-style = bar
 cursor-style-blink = false
-cursor-color = #88c0d0
+cursor-color = #ffffff
 
 # ==============================================================================
-# Paleta de Colores (Tema Nord Oscuro)
+# Paleta de Colores (Negro Puro / True Black Transparente)
 # ==============================================================================
-background = #2e3440
-foreground = #d8dee9
-selection-background = #434c5e
-selection-foreground = #eceff4
+background = #000000
+foreground = #ffffff
+selection-background = #333333
+selection-foreground = #ffffff
 
 # Normal colors (Nord)
 palette = 0=#3b4252
