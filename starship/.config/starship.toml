@@ -1,0 +1,95 @@
+# ~/.config/starship.toml - Configuración de Starship Prompt adaptada a macOS
+"$schema" = 'https://starship.rs/config-schema.json'
+
+format = """
+[░▒▓](#88C0D0)\
+$os\
+[](bg:#81A1C1 fg:#88C0D0)\
+$directory\
+[](fg:#81A1C1 bg:#434C5E)\
+$git_branch\
+$git_status\
+[](fg:#434C5E bg:#3B4252)\
+$nodejs\
+$bun\
+$rust\
+$golang\
+$python\
+[](fg:#3B4252 bg:#2E3440)\
+$cmd_duration\
+$time\
+[ ](fg:#2E3440)\
+\n$character"""
+
+[os]
+disabled = false
+style = "bg:#88C0D0 fg:#2E3440"
+format = "[ $symbol ]($style)"
+
+[os.symbols]
+Macos = "󰀵"
+Fedora = "󰣛"
+Linux = "󰌽"
+Ubuntu = "󰕈"
+Arch = "󰣇"
+
+[directory]
+style = "fg:#ECEFF4 bg:#81A1C1"
+format = "[ $path ]($style)"
+truncation_length = 3
+truncation_symbol = "…/"
+
+[directory.substitutions]
+"Documents" = "󰈙 "
+"Downloads" = " "
+"Music" = " "
+"Pictures" = " "
+
+[git_branch]
+symbol = ""
+style = "bg:#434C5E"
+format = '[[ $symbol $branch ](fg:#ECEFF4 bg:#434C5E)]($style)'
+
+[git_status]
+style = "bg:#434C5E"
+format = '[[($all_status$ahead_behind )](fg:#EBCB8B bg:#434C5E)]($style)'
+
+[nodejs]
+symbol = ""
+style = "bg:#3B4252"
+format = '[[ $symbol ($version) ](fg:#A3BE8C bg:#3B4252)]($style)'
+
+[bun]
+symbol = ""
+style = "bg:#3B4252"
+format = '[[ $symbol ($version) ](fg:#E5E9F0 bg:#3B4252)]($style)'
+
+[rust]
+symbol = ""
+style = "bg:#3B4252"
+format = '[[ $symbol ($version) ](fg:#D08770 bg:#3B4252)]($style)'
+
+[golang]
+symbol = ""
+style = "bg:#3B4252"
+format = '[[ $symbol ($version) ](fg:#88C0D0 bg:#3B4252)]($style)'
+
+[python]
+symbol = ""
+style = "bg:#3B4252"
+format = '[[ $symbol ($version) ](fg:#EBCB8B bg:#3B4252)]($style)'
+
+[cmd_duration]
+min_time = 2_000
+style = "bg:#2E3440"
+format = '[[ 󰔛 $duration ](fg:#EBCB8B bg:#2E3440)]($style)'
+
+[time]
+disabled = false
+time_format = "%R"
+style = "bg:#2E3440"
+format = '[[  $time ](fg:#D8DEE9 bg:#2E3440)]($style)'
+
+[character]
+success_symbol = '[➜](bold #A3BE8C)'
+error_symbol = '[➜](bold #BF616A)'

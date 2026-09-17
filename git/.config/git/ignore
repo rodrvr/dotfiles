@@ -1,0 +1,20 @@
+# .gitignore global para macOS y desarrollo Unix
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+
+# Thumbs y caches
+.Spotlight-V100
+.Trashes
+
+# Editores y entornos
+*.swp
+*.swo
+*~
+.idea/
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
